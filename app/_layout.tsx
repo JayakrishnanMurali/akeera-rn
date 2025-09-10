@@ -1,9 +1,9 @@
+import AppSplash from "@/components/AppSplash";
+import { ThemeProvider } from "@/src/theme";
 import { Stack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
 import React, { useCallback, useEffect, useState } from "react";
 import { View } from "react-native";
-import AppSplash from "@/components/AppSplash";
-import { ThemeProvider } from "@/src/theme";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -26,7 +26,14 @@ export default function RootLayout() {
   return (
     <ThemeProvider>
       <View style={{ flex: 1 }} onLayout={onLayout}>
-        {ready ? <Stack /> : <AppSplash />}
+        {ready ? (
+          <Stack>
+            {/* Hide root header for the tabs group */}
+            <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+          </Stack>
+        ) : (
+          <AppSplash />
+        )}
       </View>
     </ThemeProvider>
   );
