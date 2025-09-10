@@ -1,7 +1,7 @@
 import React from 'react';
 import { ActivityIndicator, GestureResponderEvent, Pressable, StyleProp, Text, TextStyle, ViewStyle } from 'react-native';
-import { useTheme } from '../../src/theme';
-import { adjust } from '../../src/theme/color-utils';
+import { useTheme } from '@/src/theme';
+import { adjust } from '@/src/theme/color-utils';
 
 type Variant = 'solid' | 'outline' | 'ghost';
 type Size = 'sm' | 'md' | 'lg';
@@ -99,4 +99,3 @@ export default function Button({
     </Pressable>
   );
 }
-

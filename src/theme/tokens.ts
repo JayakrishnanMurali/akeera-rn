@@ -121,11 +121,12 @@ export const lightTokens: ThemeTokens = {
 export const darkTokens: ThemeTokens = {
   ...lightTokens,
   colors: {
-    background: '#0B1220',
-    surface: '#101826',
-    border: '#1F2A3C',
-    text: '#F8FAFC',
-    textMuted: '#A0AEC0',
+    // Pure-black oriented dark theme for OLED
+    background: '#000000',
+    surface: '#0A0A0A',
+    border: '#1A1A1A',
+    text: '#F5F5F5',
+    textMuted: '#A3A3A3',
     accent: SUPABASE_GREEN,
     accentText: '#0B1220',
     success: '#22C55E',
@@ -135,4 +136,3 @@ export const darkTokens: ThemeTokens = {
 };
 
 export type ThemeMode = 'light' | 'dark' | 'system';
-

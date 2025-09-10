@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, StyleProp, ViewStyle } from 'react-native';
-import { useTheme } from '../../src/theme';
+import { useTheme } from '@/src/theme';
 
 export type CardProps = {
   children?: React.ReactNode;
@@ -32,4 +32,3 @@ export default function Card({ children, style, elevated = true, padding = 'md' 
     </View>
   );
 }
-

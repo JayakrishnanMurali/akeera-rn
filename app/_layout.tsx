@@ -2,8 +2,8 @@ import { Stack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
 import React, { useCallback, useEffect, useState } from "react";
 import { View } from "react-native";
-import AppSplash from "../components/AppSplash";
-import { ThemeProvider } from "../src/theme";
+import AppSplash from "@/components/AppSplash";
+import { ThemeProvider } from "@/src/theme";
 
 SplashScreen.preventAutoHideAsync();
 

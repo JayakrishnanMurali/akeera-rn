@@ -1,8 +1,8 @@
+import Typography from "@/components/ui/Typography";
+import { useTheme } from "@/src/theme";
 import { BookOpen } from "lucide-react-native";
 import React from "react";
 import { View } from "react-native";
-import { useTheme } from "../src/theme";
-import Typography from "./ui/Typography";
 
 export default function AppSplash() {
   const { theme } = useTheme();
@@ -22,7 +22,7 @@ export default function AppSplash() {
         weight="bold"
         style={{ color: colors.accent, marginTop: spacing.md }}
       >
-        akeera.
+        akeera
       </Typography>
     </View>
   );

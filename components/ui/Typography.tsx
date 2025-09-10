@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text as RNText, TextProps as RNTextProps } from 'react-native';
-import { useTheme } from '../../src/theme';
+import { useTheme } from '@/src/theme';
 
 export type TypographyVariant = 'h1' | 'h2' | 'h3' | 'subtitle' | 'body' | 'caption' | 'overline';
 
@@ -53,4 +53,3 @@ export default function Typography({
     </RNText>
   );
 }
-

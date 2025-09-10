@@ -1,6 +1,6 @@
 import { View } from "react-native";
-import { Button, Card, Typography } from "../components/ui";
-import { useTheme } from "../src/theme";
+import { Button, Card, Typography } from "@/components/ui";
+import { useTheme } from "@/src/theme";
 
 export default function Index() {
   const { theme } = useTheme();
