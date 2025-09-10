@@ -1,5 +1,7 @@
 import AppSplash from "@/components/AppSplash";
 import { ThemeProvider } from "@/src/theme";
+import { QueryProvider } from "@/src/query/QueryProvider";
+import { ProviderRegistry } from "@/src/providers";
 import { Stack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
 import React, { useCallback, useEffect, useState } from "react";
@@ -25,16 +27,20 @@ export default function RootLayout() {
 
   return (
     <ThemeProvider>
-      <View style={{ flex: 1 }} onLayout={onLayout}>
-        {ready ? (
-          <Stack>
-            {/* Hide root header for the tabs group */}
-            <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-          </Stack>
-        ) : (
-          <AppSplash />
-        )}
-      </View>
+      <QueryProvider>
+        <ProviderRegistry>
+          <View style={{ flex: 1 }} onLayout={onLayout}>
+            {ready ? (
+              <Stack>
+                {/* Hide root header for the tabs group */}
+                <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+              </Stack>
+            ) : (
+              <AppSplash />
+            )}
+          </View>
+        </ProviderRegistry>
+      </QueryProvider>
     </ThemeProvider>
   );
 }
